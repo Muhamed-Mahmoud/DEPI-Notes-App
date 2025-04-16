@@ -13,16 +13,27 @@
                       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                           <ul class="navbar-nav mb-2 mb-lg-0">
                               <li class="nav-item">
-                                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                              </li>
+                                <a class="nav-link active" routerLink="/home" routerLinkActive="active" aria-current="page">Home</a>
+                            </li>
                               <li class="nav-item">
-                                  <a class="nav-link" href="#allNotes">All Notes</a>
+                                <a class="nav-link" routerLink="/notes" routerLinkActive="active">All Notes</a>
                               </li>
                           </ul>
                       </div>
                   </div>
                   <div class="nav-btns">
-                      <a href="" class="btn btn2">Log out</a>
+                    <a (click)="showLogoutPopup = true" class="btn btn2">Log out</a>
                   </div>
               </div>
           </nav>
+
+
+
+
+          <div *ngIf="showLogoutPopup" class="popup-overlay">
+            <div class="popup bg-white shadow p-4 rounded text-center">
+              <p class="mb-3">Are you sure you want to log out?</p>
+              <button class="btn btn-danger me-2" (click)="logout()">Yes, Log out</button>
+              <button class="btn btn-secondary" (click)="showLogoutPopup = false">Cancel</button>
+            </div>
+          </div>

@@ -1,4 +1,12 @@
-<section class="bg-dark min-vh-100 d-flex flex-column justify-content-center align-items-center py-5 px-3">
+<div *ngIf="loading" class="d-flex flex-column align-items-center justify-content-center vh-100">
+  <div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <p class="mt-3 text-white fw-bold">Loading note details...</p>
+</div>
+
+
+<section *ngIf="!loading" class="bg-dark min-vh-100 d-flex flex-column justify-content-center align-items-center py-5 px-3">
   <h1 class="text-white text-center mb-4">Note Details</h1>
 
   <div class="bg-secondary text-white rounded p-4 w-100" style="max-width: 600px;">
@@ -32,7 +40,7 @@
         <span>Delete</span>
       </button>
 
-      <button (click)="editNote(note)" class="btn btn-success d-flex align-items-center ">
+      <button (click)="editNote(note)" class="btn btn-success d-flex align-items-center">
         <i class="bi bi-pencil-square"></i>
         <span>Update</span>
       </button>
