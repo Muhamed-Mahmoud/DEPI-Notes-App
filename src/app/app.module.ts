@@ -9,21 +9,20 @@ import { AppComponent } from './app.component';
 import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home/home.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    HomeComponent,
-    NavbarComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
