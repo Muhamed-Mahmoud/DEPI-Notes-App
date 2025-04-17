@@ -1,8 +1,23 @@
 
-import { CanActivateFn } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
 
-export const coreGuard: CanActivateFn = (route, state) => {
-  console.log('Core Guard');
+@Injectable({
+  providedIn: 'root'
+})
+export class GuestGuard implements CanActivate {
 
-  return false;
+  constructor( private router: Router) {}
+
+  canActivate(): boolean {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+     
+      this.router.navigate(['/notes']);
+      return false;
+    }
+
+    return true;
+  }
 };
