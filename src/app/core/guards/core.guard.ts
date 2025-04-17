@@ -14,7 +14,7 @@ export class GuestGuard implements CanActivate {
 
     if (token) {
      
-      this.router.navigate(['/notes']);
+      this.router.navigate(['/home']);
       return false;
     }
 
