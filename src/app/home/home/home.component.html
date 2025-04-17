@@ -1,11 +1,33 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div class="typing-page">
     <div class="typing-container">
     <div class="typing">
         <h2>Work by...</h2>{{ currentText }}<span class="cursor"></span>
     </div>
     </div>
+ -->
+ <app-navbar></app-navbar>
 
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Notes App</h1>
+      <p class="lead">Organize your thoughts, ideas, and tasks in one beautiful place</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" routerLink="/notes">View All Notes</button>
+        <button class="btn btn-outline" routerLink="/notes/create">Create New Note</button>
+      </div>
+      <div class="features-section">
+        <div class="typing-page">
+            <div class="typing-container">
+            <div class="typing">
+                <h2>Work by...</h2>{{ currentText }}<span class="cursor"></span>
+            </div>
+            </div>  </div>
+    </div>
+    
+    </div>
+  </div>
 
 
 

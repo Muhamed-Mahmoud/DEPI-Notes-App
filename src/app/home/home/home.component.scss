@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     min-height: calc(100vh - 70px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8ff; /* soft blue background */
+    /* soft blue background */
 }
 
 .typing-page {
@@ -16,15 +16,15 @@ html, body {
     text-align: center;
     padding: 2rem 3rem;
     border-radius: 1rem;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    margin-top: 400px;
+    background-color: transparent;
+    // box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    // margin-top: 400px;
 }
 
 .typing {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #0077cc;
+    color: #FFF;
     white-space: nowrap;
 }
 
@@ -41,3 +41,106 @@ html, body {
     0%, 50%, 100% { opacity: 1; }
     25%, 75% { opacity: 0; }
 }
+
+
+
+
+
+
+.home-container {
+    // min-height: calc(100vh - 70px); 
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section {
+    position: relative;
+    min-height: calc(100vh - 70px); 
+    background: 
+      linear-gradient(135deg, rgba(58, 123, 213, 0.692) 0%, rgba(0, 210, 255, 0.85) 100%),
+      url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent 0%, #f8f9fa 100%);
+    }
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .lead {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      min-width: 180px;
+      font-size: 1.5rem;
+    }
+  
+    .btn-primary {
+      background: white;
+      color: #3a7bd5;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+  
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
