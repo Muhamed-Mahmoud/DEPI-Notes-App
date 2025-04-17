@@ -59,12 +59,25 @@
                 <small *ngIf="Address.invalid && Address.touched" class="text-danger">Address is required</small>
             </div>
 
-            <p class="text-center mt-4">Already have an account? <a routerLink="/auth/login"
-                    class="text-body text-decoration-underline">Login</a></p>
-
+            <!-- <p class="text-center mt-4">
+                Already have an account? 
+                <i class="bi bi-box-arrow-in-right me-1 text-primary"></i>
+                <a routerLink="/auth/login" class="text-body fw-semibold">Login</a>
+              </p> -->
+              <p class="text-center mt-4 text-secondary fw-medium">
+                Already have an account?
+                <i class="bi bi-box-arrow-in-right text-primary  fs-6"></i>
+                <a routerLink="/auth/login" class="text-primary fw-bold text-decoration-none ms-1 fs-6">
+                  Login
+                </a>
+              </p>
+              
             <div class="button-group mt-3">
-                <button class="btn login-btn" id="Register" [disabled]="Register.invalid">Register</button>
-            </div>
+                <button class="btn login-btn" id="Register" [disabled]="Register.invalid">
+                    <i class="bi bi-person-plus-fill me-2"></i>
+                    Register
+                  </button>
+                              </div>
         </form>
     </div>
 </section>

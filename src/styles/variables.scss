@@ -1,0 +1,29 @@
+
+// src/styles/variables.scss
+
+// Color palette
+$primary-color: #3a7bd5;
+$secondary-color: #00d2ff;
+$success-color: #4caf50;
+$danger-color: #f44336;
+$warning-color: #ff9800;
+$info-color: #2196f3;
+
+// Typography
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+
+// Spacing
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+
+// Shadows
+$box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;

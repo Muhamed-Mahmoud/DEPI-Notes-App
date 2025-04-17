@@ -73,4 +73,15 @@ export class ViewComponent implements OnInit  {
    }
   });
   }
+
+  selectedNote: Notes | null = null;
+
+viewNote(note: Notes) {
+  this.selectedNote = note;
+}
+
+closeViewPopup() {
+  this.selectedNote = null;
+}
+
 }

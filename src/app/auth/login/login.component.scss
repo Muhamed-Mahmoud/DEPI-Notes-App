@@ -1,107 +1,107 @@
-body {
-    background-image: url('/assets/background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+@import 'src/styles/variables';
 
 .login-container {
-    background-image: url('/assets/background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgba(165, 202, 215, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
 }
 
-.login-form {
-    background-color: #000000ba;
-    padding: 2.5rem 3rem;
-    border-radius: 40px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
+.login-card {
+  border: none;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-base;
+  width: 100%;
+  max-width: 450px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-hover;
+  }
 }
 
-h3 {
-    color: #ffffff;
-    width: 500px;
-    margin-left: -180px;
+.card-body {
+  padding: 2rem;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 2rem;
+  color: $primary-color;
+  font-weight: 700;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
+.form-label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-label {
-    display: block;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
+.input-group-text {
+  background: #e3f2fd;
+  border: 1px solid #ddd;
+  color: $primary-color;
 }
 
 .form-control {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #4c4c4c;
-    border-radius: 35px;
-    background-color: #4c4c4c;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    padding-left: 20px;
+  border: 1px solid #ddd;
+  border-radius: $border-radius-md;
+  padding: 0.75rem;
+  transition: all 0.3s;
 
-}
-.form-control::placeholder {
-    color: #d2cfcf;
-    opacity: 1;
-}
-
-
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 150px;
-    margin-left: 200px;
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
 }
 
 .btn {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 35px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
-.login-btn {
-    background-color: #2174d2;
-    color: #fff;
+.btn-login {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba($primary-color, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
 
-.login-btn:hover {
-    background-color: #91aac5;
+.btn-signup {
+  background: #e3f2fd;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &:hover {
+    background: rgba($primary-color, 0.05);
+  }
 }
 
-.signup-btn {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.signup-btn:hover {
-    background-color: #5a6268;
+.alert-error {
+  background-color: rgba($danger-color, 0.1);
+  border-left: 4px solid $danger-color;
+  color: $danger-color;
+  padding: 1rem;
+  border-radius: $border-radius-md;
+  display: flex;
+  align-items: center;
 }

@@ -1,2 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-toastr/toastr';
+@import 'src/styles/variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+    font-size: 16px;
+    display: flow-root;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dcdde2;
+}
+
+::-webkit-scrollbar-thumb {
+    background:$secondary-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $primary-color;
+}
+a,
+span {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+picture,
+img {
+    display: block;
+}
+img {
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/* Reset margins and padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* منع التمرير الأفقي */
+  }
+  
+  body {
+    position: relative;
+    overflow-y: auto;
+  }
