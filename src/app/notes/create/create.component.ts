@@ -9,6 +9,8 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent {
+
+  
   noteForm
 
   noteToEdit: any = null;

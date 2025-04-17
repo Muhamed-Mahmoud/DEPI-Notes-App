@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,9 @@ export class NavbarComponent implements OnInit {
   navBar: HTMLElement | null = null;
   collapse: HTMLElement | null = null;
 
+
+
+  constructor(private router: Router) { }
   ngOnInit(): void {
     this.navBar = document.querySelector(".navlost");
     this.collapse = document.querySelector(".collapse");
@@ -28,5 +32,18 @@ export class NavbarComponent implements OnInit {
     } else {
       this.navBar.classList.remove("fixed-top");
     }
+  }
+
+
+
+
+
+
+  showLogoutPopup: boolean = false;
+
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate(['/auth/login']);
+
   }
 }

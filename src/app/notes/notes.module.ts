@@ -8,6 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     NotesRoutingModule,
+    SharedModule
+    ,
     HttpClientModule,
     ReactiveFormsModule
   ]

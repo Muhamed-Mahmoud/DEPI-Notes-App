@@ -15,6 +15,7 @@ export class ViewComponent implements OnInit  {
   private notesService: NoteService,
   private router: Router,
   private tostar:ToastrService) {}
+  loading = true
   note: Notes;
   allNotes:Notes[];
   noteToDelete: any = null;
@@ -25,6 +26,7 @@ export class ViewComponent implements OnInit  {
         map(res => Object.values(res))
       ).subscribe((notes) => {
         this.note = notes.find(n => n.id == id);
+        this.loading = false;
       });
     })
     setTimeout((toke:string) => {
