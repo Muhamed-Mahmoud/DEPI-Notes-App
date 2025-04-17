@@ -70,7 +70,7 @@ export class RegisterComponent {
           next:((res:any)=>{
            this.auth.setToken(res.token);
            this.tostar.success("Registration completed successfully")
-           this.route.navigateByUrl("Home")
+           this.route.navigateByUrl("home")
           }),
           error:(err=>{
            if (err.status === 400 ) {

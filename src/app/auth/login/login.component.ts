@@ -17,11 +17,11 @@ export class LoginComponent {
   login() {
     this.auth.login(this.email, this.password).subscribe({
       next: (res) => {
-        this.auth.setToken(res.token); // تخزين التوكن في localStorage
-        this.router.navigate(['/home']); // التوجيه إلى الصفحة الرئيسية
+        this.auth.setToken(res.token); 
+        this.router.navigate(['/home']);     
       },
       error: () => {
-        this.error = 'Invalid email or password'; // رسالة الخطأ عند الفشل
+        this.error = 'Invalid email or password';
       }
     });
   }
