@@ -9,7 +9,7 @@ import { NoteService } from 'src/app/notes/note.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  names: string[] = ['Asmaa Mahmoud', 'Muhamed Mahmoud', 'Mai Gamal'];
+  names: string[] = ['Muhamed Mahmoud', 'Asmaa Mahmoud', 'Mai Gamal'];
   currentText: string = '';
   private nameIndex = 0;
   private charIndex = 0;
