@@ -46,10 +46,6 @@
 
 // }
 
-
-
-
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -97,10 +93,9 @@ export class NoteService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-    return this.http.delete(`${this.baseUrl}/notes/${noteId}`, { headers });
+    return this.http.delete(`${this.baseUrl}/notes/${noteId}`, { headers });
 
-  }
-  
-
+  }
+  
 
 }

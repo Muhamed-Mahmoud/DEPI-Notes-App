@@ -80,8 +80,8 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
   isAuthenticated(): boolean {
-    return !!this.getToken(); // إذا كان هناك توكن يعني أن المستخدم مسجل دخول
-  }
+    return !!this.getToken();
+  }
 registerApi(data:User){
   const url = "http://localhost:8000/register";
  return this.http.post(url,data)

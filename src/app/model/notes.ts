@@ -1,8 +1,8 @@
 export interface Notes {
-  title:string,
-  content:string,
-  category: string,
-  priority: string,
-  tags: string,
-  id?:string,
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  priority: string;
+  tags?: string;
 }
