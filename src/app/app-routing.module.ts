@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard } from './shared/auth.guard';
+import { GuestGuard } from './core/guards/core.guard';
 
 const routes: Routes = [
   { 
@@ -16,7 +17,8 @@ const routes: Routes = [
   },
   { 
     path: 'auth', 
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) 
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    ,canActivate: [GuestGuard] 
   },
   { path: '', redirectTo: '/auth/login', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }

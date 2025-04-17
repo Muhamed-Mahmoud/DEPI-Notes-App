@@ -13,6 +13,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { GuestGuard } from './core/guards/core.guard';
+import { AuthGuard } from './shared/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { RouterModule } from '@angular/router';
       useClass: JwtInterceptor,
       multi: true
     }
+    , GuestGuard,
+    AuthGuard 
   ],
   bootstrap: [AppComponent],
   exports: [
