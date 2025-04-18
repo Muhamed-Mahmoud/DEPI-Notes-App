@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './feature-modules/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared.module';
