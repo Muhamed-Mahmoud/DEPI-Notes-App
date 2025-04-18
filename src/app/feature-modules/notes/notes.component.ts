@@ -101,7 +101,7 @@ import { NoteService } from './note.service';
 import { AuthService } from 'src/app/feature-modules/auth/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
-import { Notes } from 'src/app/model/notes';
+import { Notes } from 'src/app/feature-modules/notes/model-create/notes';
 
 
 @Component({

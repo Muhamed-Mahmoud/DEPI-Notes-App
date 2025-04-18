@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NoteService } from '../note.service';
 import { map } from 'rxjs';
-import { Notes } from 'src/app/model/notes';
+import { Notes } from 'src/app/feature-modules/notes/model-create/notes';
 
 @Component({
   selector: 'app-view',
