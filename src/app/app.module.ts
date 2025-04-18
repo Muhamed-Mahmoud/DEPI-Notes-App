@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { GuestGuard } from './core/guards/core.guard';
-import { AuthGuard } from './shared/auth.guard';
+import { AuthGuardsure } from './core/guards/auths.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import { AuthGuard } from './shared/auth.guard';
       multi: true
     }
     , GuestGuard,
-    AuthGuard 
+    AuthGuardsure 
   ],
   bootstrap: [AppComponent],
   exports: [
