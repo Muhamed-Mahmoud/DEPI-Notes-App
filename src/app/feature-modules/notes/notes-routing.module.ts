@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotesComponent } from './notes.component';
 import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
-import { AuthGuard } from '../core/guards/auth.guard';
+import { AuthGuard } from 'src/app/core/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: NotesComponent },

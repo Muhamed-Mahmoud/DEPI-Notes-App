@@ -98,7 +98,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from './note.service';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from 'src/app/feature-modules/auth/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 import { Notes } from 'src/app/model/notes';

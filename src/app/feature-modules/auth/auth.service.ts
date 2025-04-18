@@ -41,9 +41,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../model/user';
+import { User } from 'src/app/model/user';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthService {
   private baseUrl = 'http://localhost:8000';
   //private tokenKey = 'auth_token';

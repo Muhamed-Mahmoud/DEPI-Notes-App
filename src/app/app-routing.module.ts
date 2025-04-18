@@ -7,17 +7,17 @@ import { GuestGuard } from './core/guards/core.guard';
 const routes: Routes = [
   { 
     path: 'notes', 
-    loadChildren: () => import('./notes/notes.module').then(m => m.NotesModule),
+    loadChildren: () => import('./feature-modules/notes/notes.module').then(m => m.NotesModule),
     canActivate: [AuthGuardsure]
   },
   { 
     path: 'home', 
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    loadChildren: () => import('./feature-modules/home/home.module').then(m => m.HomeModule),
     canActivate: [AuthGuardsure]
   },
   { 
     path: 'auth', 
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./feature-modules/auth/auth.module').then(m => m.AuthModule)
     ,canActivate: [GuestGuard] 
   },
   { path: '', redirectTo: '/auth/login', pathMatch: 'full' },

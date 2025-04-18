@@ -9,11 +9,11 @@ import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { HomeComponent } from './home/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { GuestGuard } from './core/guards/core.guard';
 import { AuthGuardsure } from './core/guards/auths.guard';
+import { HomeComponent } from './feature-modules/home/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
