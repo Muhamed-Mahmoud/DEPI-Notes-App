@@ -31,23 +31,26 @@ export class HomeComponent implements OnInit {
   }
   startTyping() {
     const currentName = this.names[this.nameIndex];
-    const typingSpeed = this.isDeleting ? 50 : 100;
-
+    const typingSpeed = this.isDeleting ? 30 : 100; 
+    const pauseBetween = 1500; 
+  
     if (this.isDeleting) {
       this.currentText = currentName.substring(0, this.charIndex--);
     } else {
       this.currentText = currentName.substring(0, this.charIndex++);
     }
-
+  
     if (!this.isDeleting && this.charIndex > currentName.length) {
       this.isDeleting = true;
-      setTimeout(() => this.startTyping(), 1000); // pause before deleting
+      setTimeout(() => this.startTyping(), pauseBetween);
       return;
     } else if (this.isDeleting && this.charIndex < 0) {
       this.isDeleting = false;
       this.nameIndex = (this.nameIndex + 1) % this.names.length;
+      setTimeout(() => this.startTyping(), 300); 
+      return;
     }
-
+  
     setTimeout(() => this.startTyping(), typingSpeed);
   }
 }
