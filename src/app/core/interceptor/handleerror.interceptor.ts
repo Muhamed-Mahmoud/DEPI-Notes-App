@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
 import {
-  HttpRequest,
-  HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest
 } from '@angular/common/http';
-import { catchError, map, Observable, tap, throwError } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { catchError, map, Observable, tap, throwError } from 'rxjs';
 
 @Injectable()
 export class  HandleErrorInterceptor implements HttpInterceptor {

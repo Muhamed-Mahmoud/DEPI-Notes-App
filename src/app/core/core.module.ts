@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CoreRoutingModule } from './core-routing.module';
 import { HttpInterceptorProvider } from './interceptor';
 
 
@@ -9,7 +8,6 @@ import { HttpInterceptorProvider } from './interceptor';
   declarations: [],
   imports: [
     CommonModule,
-    CoreRoutingModule
   ],
   providers: [HttpInterceptorProvider]
 })
