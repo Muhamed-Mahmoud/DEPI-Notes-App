@@ -4,13 +4,36 @@ import { ToastrService } from 'ngx-toastr';
 import { NoteService } from '../note.service';
 import { map } from 'rxjs';
 import { Notes } from 'src/app/feature-modules/notes/model-create/notes';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
-  styleUrls: ['./view.component.scss']
+  styleUrls: ['./view.component.scss'],
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        query('.note-card', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger('100ms', [
+            animate('0.5s ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+          ])
+        ], { optional: true })
+      ])
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('0.3s ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('0.2s ease-in', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class ViewComponent implements OnInit  {
+animateCards = true;
  constructor(  private route: ActivatedRoute,
   private notesService: NoteService,
   private router: Router,

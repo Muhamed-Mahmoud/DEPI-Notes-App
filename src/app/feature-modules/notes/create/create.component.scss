@@ -4,7 +4,7 @@
 .notes-container {
   padding: 3rem 1rem;
   background: linear-gradient(to bottom right, #f8f9fa, #e3f2fd);
-  min-height: calc(100vh);
+  min-height: calc(100vh - 70px);
 }
 
 .note-card {

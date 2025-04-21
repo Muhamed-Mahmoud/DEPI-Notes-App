@@ -1,4 +1,3 @@
-
 /* Navbar Styles */
 .navbar {
   padding: 0.8rem 1rem;
@@ -17,18 +16,6 @@
   
   }
 
-  // .navbar-brand {
-  //   font-weight: 700;
-  //   font-size: 1.5rem;
-  //   color: #3a7bd5 !important;
-  //   transition: all 0.3s ease;
-  // }
-  
-  // .navbar-brand:hover {
-  //   color: #00d2ff !important;
-  //   transform: scale(1.02);
-  // }
-  
   .nav-link {
     font-weight: 500;
     color: #555 !important;
@@ -95,8 +82,17 @@
   }
   
   .popup {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
     max-width: 400px;
     width: 90%;
+    text-align: center;
+    
+    p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
     animation: popupFadeIn 0.3s ease-out;
   }
   
@@ -111,22 +107,6 @@
     }
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 992px) {
-    .navbar-collapse {
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
-    }
-    
-    .nav-btns {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid #eee;
-    }
-  }
   .fixed-top {
     animation: slideDown 0.3s ease-in-out;
   }
@@ -283,4 +263,28 @@
     transition: opacity 0.3s ease, background 0.5s ease;
   }
 }
-
+  /* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+  .navbar-collapse {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 14px;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .btn2 {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}

@@ -185,6 +185,7 @@
   font-size: 3rem;
   color: #f44336;
   margin-bottom: 1rem;
+  animation: pulse 1.5s infinite;
 }
 
 .popup h5 {
@@ -203,21 +204,48 @@
   gap: 1rem;
 }
 
+.btn-confirm,
+.btn-cancel {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .btn-confirm {
   background: #f44336;
   color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-}
+  box-shadow: 0 2px 5px rgba(244, 67, 54, 0.3);
 
+  &:hover {
+    background: #e53935;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
 .btn-cancel {
   background: #e0e0e0;
   color: #333;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+
+  &:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
+
 
 /* Animations */
 @keyframes fadeInUp {
@@ -232,9 +260,21 @@
 }
 
 .fadeInUp {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 15s ease-out forwards;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
 
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .create-btn-container {
